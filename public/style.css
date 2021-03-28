@@ -1,0 +1,81 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #6155a6;
+  font-family: sans-serif;
+}
+
+#timer {
+  font-weight: 700;
+  font-size: 5em;
+  color: #ffe6e6;
+  z-index: 100;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+  }
+}
+
+.heart {
+  background-color: #ffabe1;
+  position: relative;
+  transform: rotate(135deg);
+}
+
+.heart-container {
+  position: absolute;
+  top: -50px;
+  animation: fall linear forwards;
+}
+
+.heart::after {
+  content: '';
+  border-radius: 50%;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.heart::before {
+  content: '';
+  border-radius: 50%;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+@media screen and (max-width: 465px) {
+  body {
+    font-size: .6rem;
+  }
+}

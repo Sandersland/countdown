@@ -1,0 +1,19 @@
+{
+  "name": "countdown",
+  "version": "1.0.0",
+  "description": "A thing for Christine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "Steffen Andersland",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
